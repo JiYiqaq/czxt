@@ -160,7 +160,7 @@ public class proFrame {
          * 所有进程信息
          */
         //创建表头
-        model.setColumnIdentifiers(new Object[]{"PID","到达时间","大小","优先级"});//,"响应比","状态"
+        model.setColumnIdentifiers(new Object[]{"PID","到达时间","服务时间","优先级"});//,"响应比","状态"
         PCB.PCB.forEach(process -> {
             model.addRow(new Vector<>(Arrays.asList(process.getpID(), process.getcTime(),
                     process.getpSize(), process.getpLevel())));
